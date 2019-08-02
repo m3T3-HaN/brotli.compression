@@ -19,7 +19,6 @@ ob_end_flush();
 
 function sanitize_output($buffer) {
 
-
     $search = array(
         '/\>[^\S ]+/s',     // strip whitespaces after tags, except space
         '/[^\S ]+\</s',     // strip whitespaces before tags, except space
@@ -34,7 +33,8 @@ function sanitize_output($buffer) {
         ''
     );
 
-    if(!config['DEBUG'])
+
+    //eğer kaynak kodun temizlenmesini izteminiyorsanız burayı kapatabilirsinniz
     $buffer = preg_replace($search, $replace, $buffer);
 
     //compressMethods list priorty is important here
