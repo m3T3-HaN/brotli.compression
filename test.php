@@ -11,7 +11,7 @@ define('forceEncoding',"");
 
 
 ob_start("sanitize_output");
-    echo "hello world";
+    echo "<html><head><title>compression</title></head><body></body></html>";
 ob_end_flush();
 
 
